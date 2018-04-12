@@ -12,16 +12,16 @@ tags: [github-page, jekyll, liquid]
       <div class="info-card">
         <h1>Dzreal</h1>
         <a href="https://github.com/GitDzreal93" target="_blank"><img src="https://github.com/favicon.ico" alt="" width="25"/></a>
-      </div>
-      <div id="particles-js"></div>
       <div id="categories-3" class="left">
-     <h3>Categories</h3>
-     <ul>
-         {% for cat in site.categories %}
-             	{{ cat[0] }}
-             {% endfor %}
-     </ul>
- </div>
+        <h3>Categories</h3>
+        <ul>
+          {% for cat in site.categories %}
+                {{ cat[0] }}
+              {% endfor %}
+        </ul>
+      </div>
+    </div>
+      <div id="particles-js"></div>
     </div>
     <div class="index-content">
       <ul class="artical-list">
