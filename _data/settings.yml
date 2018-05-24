@@ -7,7 +7,7 @@ google-ID: 'UA-112060364-2'
 
 menu:
 - {name: '个人简历', folder: 'pages', file: 'resume.html'}
-- {name: 'Python', folder: 'pages', file: 'resources.html'}
+- {name: 'Python', folder: 'pages', file: 'python.html'}
 - {name: 'Linux', folder: 'pages', file: 'sample-posts.html'}
 - {name: 'DB', folder: 'pages', file: 'documentation.html'}
 - {name: 'CI', folder: 'pages', file: 'about.html'}

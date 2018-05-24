@@ -1,9 +1,8 @@
 ---
 layout: misc
 title: Resume
+image: me_1.jpg
 ---
-
-![照片]({{ site.github.url }}/assets/img/me_1.jpg)
 
 # 联系方式
 - 手机：13161935487 （最优联系时间：10:00AM -- 23:00PM）
