@@ -7,13 +7,13 @@ tags: [python]
 image: arctic-4.jpg
 ---
 
-站在巨人的肩膀上，仰望星辰。
+站在巨人的肩膀上，仰望星辰。（这里记录的是，日常工作中看到别人写的比较好的文章，相当于做个自用的书签吧）
 
-# Python-入门
+# 一、Python-入门
 - [【大师】廖雪峰的博客](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
 
 
-# Python-Web
+# 二、Python-Web
 ## Django
 - [【科普】django models解读](https://www.cnblogs.com/xone/p/6744780.html)
 - [【大师】mtianyan的博客](http://blog.mtianyan.cn/)
@@ -41,13 +41,13 @@ image: arctic-4.jpg
 - [【实战】家教平台小程序后端](https://github.com/mygoda/TutorPlatform)
 
 
-# Python-爬虫
+# 三、Python-爬虫
 *TODO*
 
 
-# Python-数据分析
+# 四、Python-数据分析
 *TODO*
 
 
-# Python-自动化测试
+# 五、Python-自动化测试
 *TODO*
