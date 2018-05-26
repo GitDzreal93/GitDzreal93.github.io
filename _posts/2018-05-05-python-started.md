@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Getting Started"
+title: "Python Started"
 author: "Dzreal"
 categories: python
 tags: [python]
@@ -11,7 +11,7 @@ image: python-main.jpg
 来不及解释了，赶快上车吧
 
 ## 精选文章
-1. python-awsome
+1. [python-awsome](https://gitdzreal93.github.io/python/python-awsome.html)
 
 ## 目录
 1. [python-awsome](https://gitdzreal93.github.io/python/python-awsome.html)
