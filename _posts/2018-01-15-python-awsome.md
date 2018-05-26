@@ -4,7 +4,7 @@ title: "python 艺海拾贝"
 author: "Dzreal"
 categories: python
 tags: [python]
-image: arctic-4.jpg
+image: yhsb.jpg
 ---
 
 站在巨人的肩膀上，仰望星辰。（这里记录的是，日常工作中看到别人写的比较好的文章，相当于做个自用的书签吧）
