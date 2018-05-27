@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MySQL 性能相关"
+title: "MySQL 性能分析"
 author: "Dzreal"
 categories: db
 tags: [db]
@@ -32,7 +32,7 @@ image: mysql-perform.jpg
     2. 进行分级缓存（避免前端Web服务器突然一下子缓存太多）  
 
     3. 避免使用“ select  * ”进行查询  
-    
+
     4. 分离业务网络和服务器网络  
 
 4、 **磁盘IO**  
