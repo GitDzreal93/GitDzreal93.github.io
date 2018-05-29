@@ -12,15 +12,12 @@ image: mysql-perform.jpg
 
 ```
 graph LR
-Client-API-->连接管理层
-连接管理层 --> SQL层
-SQL层 --> 引擎层 
-引擎层 --> 物理存储层
+Client-API <--> 连接管理层 <--> SQL层 <--> 引擎层 <--> 物理存储层
 ```
 
 1. Client-API：Mysql连接器（connectors）  
 
-Include : Native C API, JDBC, ODBC, .NET, PHP, Python, Perl, Ruby, VB...
+包括 : Native C API, JDBC, ODBC, .NET, PHP, Python, Perl, Ruby, VB...
 
 2. 连接管理层（connection Pool）  
 
@@ -39,7 +36,7 @@ Authentication - Thread Reuse - Connection Limits - Check Memory - Caches
 
 4. 引擎层
 
-Include : InnoDB, MyISAM, Cluster, Archive, Merge, Memory, Partner, Community, Custom
+包括 : InnoDB, MyISAM, Cluster, Archive, Merge, Memory, Partner, Community, Custom
 
 5. 物理存储层
 
@@ -47,3 +44,25 @@ File System : NTFS - NFS, SAN - NAS
 
 Files &Logs : Redo, Undo, Data, Index, Binary, Error, Query, Slow 
 
+
+## MySQL 存储引擎的差异
+
+特点 | Myisam | NDB | Memory |InnoDb
+---  | --- | --- | --- | ---:
+存储限制 | 没有 | 没有 | 有 | 64TB
+事务安全 |      | 支持 |     | 支持
+锁机制   | 表锁 | 页锁 | 表锁 | 行锁
+B树索引  | 支持 | 支持 | 支持 | 支持
+哈希索引 |      |      | 支持 | 支持
+全文索引 | 支持 |      |      | 
+集群索引 |      |      |      | 支持
+数据缓存 |      |      | 支持 | 支持
+索引缓存 | 支持 |      | 支持 | 支持
+数据可压缩 | 支持 |    |      |     
+空间使用 |  低  |  低  |  N/A | 高    
+内存使用 |  低  |  低  |  中等 | 高     
+批量插入的速度 | 高  | 高  | 高  | 低
+支持外键 |      |      |      | 支持   
+
+
+## MySQL 
