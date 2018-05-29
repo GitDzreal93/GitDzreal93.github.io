@@ -6,7 +6,7 @@ categories: db
 tags: [db]
 image: mysql-perform.jpg
 ---
-# MySQL 性能相关
+# MySQL 性能分析
 
 ### 影响数据库性能的因素
 1、**SQL查询速度（mysql不支持多CPU并发运算，每个SQL只能用到一个CPU**  
@@ -55,7 +55,7 @@ image: mysql-perform.jpg
 
 慢查询：超过指定时间的SQL语句查询  
 
-慢查询语句：EXPLAIN SELECT语句  
+慢查询分析语句：EXPLAIN SELECT语句  
 
 *举个例子*：  
 
@@ -113,6 +113,40 @@ possible_keys: PRIMARY
         Extra: NULL
 1 row in set (0.03 sec)
 ```
+
+### 主要字段详解  
+
+**select_type**：SIMPLE / PRIMARY / SUBQUERY / DERIVED …  
+
+作用：主要用于区分不同子查询，SIMPLE表示不含子查询  
+
+**type**：ALL / index / range / ref / eq_ref / const, system /NULL  
+
+访问类型：获取数据的方式，从左到右，性能由差到好 
+
+- ALL：Full Table Scan， 遍历全表
+- index：Full Index Scan，遍历索引树
+- range：索引范围扫描，返回匹配值域的行，常见于between/in等
+- ref：非唯一性索引扫描，返回匹配某个单独值的所有行，常见于前
+缀索引查询
+- eq_ref：唯一性索引扫描，对于每个索引键，表中只有一条记录与
+之匹配
+
+**possible_keys**：候选索引  
+
+**key**：实际使用的索引  
+
+**ref**：连接匹配条件，即哪些列或常量被用于查找索引列上的值  
+
+**rows**：MySQL根据表统计信息及索引选用情况，估算的找到所需的记录所需要读取的行数
+
+**Extra**：不适合在前面列中显示，但十分重要的额外信息  
+
+    - Using index：表示相应的select操作中使用了覆盖索引   
+    - Using where：表示服务器从存储引擎收到记录后进行“后过滤”（Post-filter）
+    - Using temporary：表示MySQL需要使用临时表来存储结果集，常见于排序和分组查询
+    - Using filesort：表示MySQL中无法利用索引完成的排序操作，称为“文件排序”
+
 慢查询工具：  
 
     1. hook，在服务端sql语句执行前触发hook（explain select）  
