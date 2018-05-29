@@ -65,7 +65,7 @@ image: tjpu-lib.jpg
 
 # 关系型数据库的使用
 1. [MySQL]()
-    1. [mysql 入门级知识]()
+    1. [mysql 入门知识](https://gitdzreal93.github.io/db/db-mysql-base.html)
     2. [mysql 性能分析](https://gitdzreal93.github.io/db/db-mysql-performance.html)
 
 # 非关系型数据库的使用

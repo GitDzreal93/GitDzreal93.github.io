@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "MySQL 基础入门"
+title: "MySQL 入门知识"
 author: "Dzreal"
 categories: db
 tags: [db]
-image: mysql-perform.jpg
+image: mysql-base.jpg
 ---
-# MySQL 基础入门
+# MySQL 入门知识
 
 ## MySQL 体系结构
 
