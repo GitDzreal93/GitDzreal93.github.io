@@ -48,8 +48,8 @@ Files &Logs : Redo, Undo, Data, Index, Binary, Error, Query, Slow
 ## MySQL 存储引擎的差异
 
 特点 | Myisam | NDB | Memory |InnoDb
-:---:  | :---: | :---: | :---: | :---:
-存储限制 | 没有 | 没有 | 有 | 64TB
+:-:  | :-: | :-: | :-: | :-:
+存储限制 | 没有 | 没有 | 有 | 64TB 
 事务安全 |      | 支持 |     | 支持
 锁机制   | 表锁 | 页锁 | 表锁 | 行锁
 B树索引  | 支持 | 支持 | 支持 | 支持
@@ -60,9 +60,27 @@ B树索引  | 支持 | 支持 | 支持 | 支持
 索引缓存 | 支持 |      | 支持 | 支持
 数据可压缩 | 支持 |    |      |     
 空间使用 |  低  |  低  |  N/A | 高    
-内存使用 |  低  |  低  |  中等 | 高     
-批量插入的速度 | 高  | 高  | 高  | 低
-支持外键 |      |      |      | 支持   
+内存使用 |  低  |  低  |  中等 | 高    
+批量插入的速度 | 高  | 高  | 高  | 低 
+支持外键 |      |      |      | 支持    
 
 
-## MySQL 
+## MySQL 主从延迟时间计算
+
+从库上执行
+```
+SHOW SLAVE STATUS\G;  #查看从库状态
+```
+
+behind_master_sconds = IO线程的时间戳 - SQL线程的时间戳
+
+完整主从延迟 = behind_master_sconds + Master_slave_trans_delay
+
+## MySQL 常见连接错误  
+
+2003：Can't connect to MySQL server ##一般是网络超时  
+
+2006：Server has gone away ## dbproxy在重启时/client端超时  
+
+2013：Lost connection … during query ##可能dbproxy在重启
+
