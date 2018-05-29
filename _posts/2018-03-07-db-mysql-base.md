@@ -48,7 +48,7 @@ Files &Logs : Redo, Undo, Data, Index, Binary, Error, Query, Slow
 ## MySQL 存储引擎的差异
 
 特点 | Myisam | NDB | Memory |InnoDb
----  | --- | --- | --- | ---:
+:---:  | :---: | :---: | :---: | :---:
 存储限制 | 没有 | 没有 | 有 | 64TB
 事务安全 |      | 支持 |     | 支持
 锁机制   | 表锁 | 页锁 | 表锁 | 行锁
