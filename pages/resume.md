@@ -28,10 +28,13 @@ title: Resume
 ![作业帮]({{ site.github.url }}\assets\img\zyb_logo.png)
 ## ![作业帮]({{ site.github.url }}\assets\img\zyb_logo.png) 作业帮 （ 2017年3月 ~ 2018年7月 ）
 
-<span>
-    <img src="{{ site.github.url }}/assets/img/zyb_logo.png">
-    <h2>作业帮 （ 2017年3月 ~ 2018年7月 ）<h2>
-</span>
+<div style="float:left; max-width:445px;">
+    <div style="float:left; margin-right:10px"><img src="{{ site.github.url }}/assets/img/zyb_logo.png"></div>
+    <div style="position:relative; float:left; max-width:380px">
+        <h2>作业帮<h2>
+        <span>（ 2017年3月 ~ 2018年7月 ）</span>
+    </div>    
+</div>
 
 ### 业务测试 
 负责 作业帮APP 和 一课APP 版本测试、打包工作
