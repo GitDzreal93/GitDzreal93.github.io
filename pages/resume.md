@@ -5,6 +5,7 @@ title: Resume
 
 <div style="margin-top:50px; width:100px; height:100px; border-radius:50%; overflow:hidden;">
     <img style="margin:0 auto auto auto;" src="{{ site.github.url }}/assets/img/me_1.jpg">
+    <div align="right"><h1>黄大臻</h1></div>   
 </div>
 
 # 联系方式
@@ -15,7 +16,7 @@ title: Resume
 
 # 个人信息
 
- - 黄大臻 / 男 / 1993
+ - **黄大臻** / 男 / 1993
  - 本科 / 天津工业大学 / 自动化专业 
  - 工作年限：2年
  - 技术博客：https://gitdzreal93.github.io/ 
