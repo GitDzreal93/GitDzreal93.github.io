@@ -4,14 +4,14 @@ title: Resume
 ---
 
 ```html
-<dev style="background-color:red">
+<div style="background-color:red">
     <span><h1>hello world!</h1></span>
-</dev>
+</div>
 ```
 
-<dev style="background-color:green">
+<div style="background-color:green">
     <span><h1>hello world!</h1></span>
-</dev>
+</div>
 
 ![照片]({{ site.github.url }}/assets/img/me_1.jpg)
 
