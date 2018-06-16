@@ -2,12 +2,10 @@
 layout: misc
 title: Resume
 ---
-<div style="margin-top:50px; width:100px; height:100px; border-radius:50%; overflow:display; border:5px solid black;">
+
+<div style="margin-top:50px; width:100px; height:100px; border-radius:50%; overflow:hidden;">
     <img style="margin:0 auto auto auto;" src="{{ site.github.url }}/assets/img/me_1.jpg">
 </div>
-
-
-<!-- ![照片]({{ site.github.url }}/assets/img/me_1.jpg)
 
 # 联系方式
 - 手机：13161935487 （最优联系时间：10:00AM -- 23:00PM）
@@ -75,4 +73,4 @@ title: Resume
 - 个性：乐观、勤奋、积极、开朗。不管是QA组内还是和接触到的RD、PM，都相处十分融洽。
 - 职位：在QA团队里，担任 biu主席 一职，负责活跃团队气氛。爱好运动，担任 作业帮足球队 副会长。
 
- -->
+
