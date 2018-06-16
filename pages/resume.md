@@ -31,8 +31,7 @@ title: Resume
         </img>
     </div>
     <div style="float:left; max-width:380px">
-        <h5>作业帮<h5>
-        <span>（ 2017年3月 ~ 2018年7月 ）</span>
+        <h5>作业帮（ 2017年3月 ~ 2018年7月 ）<h5>
     </div>  
 </div>
 
