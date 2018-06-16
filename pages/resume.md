@@ -2,6 +2,13 @@
 layout: misc
 title: Resume
 ---
+
+'''html
+<dev style="background-color:red">
+    <span><h1>hello world!</h1></span>
+</dev>
+'''
+
 ![照片]({{ site.github.url }}/assets/img/me_1.jpg)
 
 # 联系方式
