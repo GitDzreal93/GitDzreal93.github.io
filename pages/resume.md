@@ -32,7 +32,7 @@ title: Resume
     <div style="float:left; margin-right:10px">
         <img src="{{ site.github.url }}/assets/img/zyb_logo.png">
     </div>
-    <div style="position:relative; float:left; max-width:380px">
+    <div style="float:left; max-width:380px">
         <h4>作业帮<h4>
         <span>（ 2017年3月 ~ 2018年7月 ）</span>
     </div>    
