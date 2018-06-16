@@ -25,13 +25,15 @@ title: Resume
 
 # 工作经历
 
-![作业帮]({{ site.github.url }}\assets\img\zyb_logo.png)
-## ![作业帮]({{ site.github.url }}\assets\img\zyb_logo.png) 作业帮 （ 2017年3月 ~ 2018年7月 ）
+<!-- ![作业帮]({{ site.github.url }}\assets\img\zyb_logo.png)
+## ![作业帮]({{ site.github.url }}\assets\img\zyb_logo.png) 作业帮 （ 2017年3月 ~ 2018年7月 ） -->
 
 <div style="float:left; max-width:445px;">
-    <div style="float:left; margin-right:10px"><img src="{{ site.github.url }}/assets/img/zyb_logo.png"></div>
+    <div style="float:left; margin-right:10px">
+        <img src="{{ site.github.url }}/assets/img/zyb_logo.png">
+    </div>
     <div style="position:relative; float:left; max-width:380px">
-        <h2>作业帮<h2>
+        <h4>作业帮<h4>
         <span>（ 2017年3月 ~ 2018年7月 ）</span>
     </div>    
 </div>
