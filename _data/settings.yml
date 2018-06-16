@@ -11,7 +11,7 @@ menu:
 - {name: 'Linux', folder: 'pages', file: 'linux.html'}
 - {name: 'DB', folder: 'pages', file: 'db.html'}
 - {name: 'CI', folder: 'pages', file: 'ci.html'}
-- {name: '测试开发-awesome', folder: 'pages', file: 'test-dev.html'}
+- {name: '测试开发经验', folder: 'pages', file: 'test-dev.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
