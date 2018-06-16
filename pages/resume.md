@@ -5,7 +5,6 @@ title: Resume
 
 <div style="margin-top:50px; width:100px; height:100px; border-radius:50%; overflow:hidden;">
     <img style="margin:0 auto auto auto;" src="{{ site.github.url }}/assets/img/me_1.jpg">
-    <div align="right"><h1>黄大臻</h1></div>   
 </div>
 
 # 联系方式
@@ -26,6 +25,7 @@ title: Resume
 
 # 工作经历
 
+[作业帮]({{ site.github.url }}\assets\img\zyb_logo.png)
 ## 作业帮 （ 2017年3月 ~ 2018年7月 ）
 
 ### 业务测试 
