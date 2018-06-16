@@ -28,12 +28,13 @@ title: Resume
 <!-- ![作业帮]({{ site.github.url }}\assets\img\zyb_logo.png)
 ## ![作业帮]({{ site.github.url }}\assets\img\zyb_logo.png) 作业帮 （ 2017年3月 ~ 2018年7月 ） -->
 
-<div style="float:left;">
+<div style="float:left; max-width:445px;">
     <div style="float:left; margin-right:10px">
         <img src="{{ site.github.url }}/assets/img/zyb_logo.png">
     </div>
-    <div style="float:left;">
-        <b><h4>作业帮 （ 2017年3月 ~ 2018年7月 ）<h4></b>
+    <div style="float:left; max-width:380px">
+        <h4>作业帮<h4>
+        <span>（ 2017年3月 ~ 2018年7月 ）</span>
     </div>    
 </div>
 
