@@ -31,12 +31,14 @@ title: Resume
 <div style="float:left; max-width:445px;">
     <div style="float:left; margin-right:10px">
         <img src="{{ site.github.url }}/assets/img/zyb_logo.png">
+        作业帮（ 2017年3月 ~ 2018年7月 ）
     </div>
-    <div style="float:left; max-width:380px">
-        <h4>作业帮<h4>
+</div>
+    <!-- <div style="float:left; max-width:380px">
+        <h5>作业帮<h5>
         <span>（ 2017年3月 ~ 2018年7月 ）</span>
     </div>    
-</div>
+</div> -->
 
 ### 业务测试 
 负责 作业帮APP 和 一课APP 版本测试、打包工作
