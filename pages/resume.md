@@ -25,8 +25,8 @@ title: Resume
 
 # 工作经历
 
-[作业帮]({{ site.github.url }}\assets\img\zyb_logo.png)
-## 作业帮 （ 2017年3月 ~ 2018年7月 ）
+![作业帮]({{ site.github.url }}\assets\img\zyb_logo.png)
+## ![作业帮]({{ site.github.url }}\assets\img\zyb_logo.png) 作业帮 （ 2017年3月 ~ 2018年7月 ）
 
 ### 业务测试 
 负责 作业帮APP 和 一课APP 版本测试、打包工作
