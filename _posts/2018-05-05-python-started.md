@@ -19,4 +19,4 @@ image: python-main.jpg
 3. [python 进阶]()
 4. [python 项目]()
 5. [python 速查]()
-6. [python 面试]()
+6. [python 面试](https://gitdzreal93.github.io/python/python-interview.html)
