@@ -420,7 +420,9 @@ if __name__ == '__main__':
 
 **解答**
 > python 实现的八大排序 ：http://python.jobbole.com/82270/
+
 > 详解（虽然不是用Python实现）：https://www.cnblogs.com/RainyBear/p/5258483.html
+
 > 时间复杂度、原理相关 ：https://blog.csdn.net/yuxin6866/article/details/52771739
 
 
