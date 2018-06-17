@@ -16,6 +16,7 @@ image: interview.jpg
 3. [django 后端开发面试题](https://blog.csdn.net/ayocross/article/details/56509840?utm_source=itdadao&utm_medium=referral)
 4. [自己总结的面试题](#自己总结的面试题)
 
+---
 
 ## 自己总结的面试题
 
@@ -33,6 +34,7 @@ image: interview.jpg
 * [12. 迭代器和可迭代对象](#12-迭代器和可迭代对象)
 * [13. 【算法】八大排序算法的python实现](#13-八大排序算法的python实现)
 
+---
 
 ## 1 如何去除列表中的重复元素
 
