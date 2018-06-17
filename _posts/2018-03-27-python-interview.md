@@ -34,6 +34,7 @@ image: interview.jpg
     * [10. 如何让字典保持有序](#10.如何让字典保持有序)
     * [11. 猜数字游戏](#11.猜数字游戏)
     * [12. 迭代器和可迭代对象](#12.迭代器和可迭代对象)
+    * [13. 【算法】八大排序算法的python实现](#13.八大排序算法的python实现)
 
 
 
@@ -413,4 +414,192 @@ if __name__ == '__main__':
     # 可迭代对象
     for info in WeatherIterable(target_citys):
         print(info)
+```
+
+## 13.八大排序算法的python实现
+
+*题目*: 代码实现如下所示的所有排序算法（内部排序【数据记录在内存的排序】）
+
+- （1）（直接）插入排序  【插入排序】
+- （2）希尔排序         【插入排序】
+- （3）（直接）选择排序  【选择排序】
+- （4）冒泡排序         【交换排序】
+- （5）归并排序         【归并排序】   
+- （6）快速排序         【交换排序】
+- （7）堆排序           【选择排序】
+- （8）基数排序         【基数排序】
+
+**解答**
+> python 实现的八大排序 ：http://python.jobbole.com/82270/
+> 详解（虽然不是用Python实现）：https://www.cnblogs.com/RainyBear/p/5258483.html
+> 时间复杂度、原理相关 ：https://blog.csdn.net/yuxin6866/article/details/52771739
+
+![总结](http://cricode.qiniudn.com/sort_table.jpg)
+
+```python
+# （1）插入排序
+# 工作原理：通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。
+
+def insert_sort(lists):
+    # 插入排序
+    count = len(lists)
+    for i in range(1, count):
+        key = lists[i]
+        j = i - 1
+        while j >= 0:
+            if lists[j] > key:
+                lists[j + 1] = lists[j]
+                lists[j] = key
+            j -= 1
+    return lists
+
+
+#（2）希尔排序(shell sort)
+# 工作原理：直接插入排序的增强版本，也叫缩小增量排序
+
+def shell_sort(lists):
+    # 希尔排序
+    count = len(lists)
+    step = 2
+    group = count / step
+    while group > 0:
+        for i in range(0, group):
+            j = i + group
+            while j < count:
+                k = j - group
+                key = lists[j]
+                while k >= 0:
+                    if lists[k] > key:
+                        lists[k + group] = lists[k]
+                        lists[k] = key
+                    k -= group
+                j += group
+        group /= step
+    return lists
+
+
+# （3）选择排序
+# 工作原理：
+# 1）首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置
+# 2）再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。
+# 3）重复第二步，直到所有元素均排序完毕。
+
+def select_sort(lists):
+    # 选择排序
+    count = len(lists)
+    for i in range(0, count):
+        min = i
+        for j in range(i + 1, count):
+            if lists[min] > lists[j]:
+                min = j
+        lists[min], lists[i] = lists[i], lists[min]
+    return lists
+
+
+# （4）冒泡排序
+# 工作原理：它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。最后的数是最大的数
+
+def bubble_sort(lists):
+    # 冒泡排序
+    count = len(lists)
+    for i in range(0, count):
+        for j in range(i + 1, count):
+            if lists[i] > lists[j]:
+                lists[i], lists[j] = lists[j], lists[i]
+    return lists
+
+
+# （5）归并排序
+# 工作原理：归并排序是建立在归并操作上的一种有效的排序算法,该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。
+
+def merge(left, right):
+    i, j = 0, 0
+    result = []
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result += left[i:]
+    result += right[j:]
+    return result
+ 
+def merge_sort(lists):
+    # 归并排序
+    if len(lists) <= 1:
+        return lists
+    num = len(lists) / 2
+    left = merge_sort(lists[:num])
+    right = merge_sort(lists[num:])
+    return merge(left, right)
+
+
+#（6）快速排序
+# 工作原理：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
+
+def quick_sort(lists, left, right):
+    # 快速排序
+    if left >= right:
+        return lists
+    key = lists[left]
+    low = left
+    high = right
+    while left < right:
+        while left < right and lists[right] >= key:
+            right -= 1
+        lists[left] = lists[right]
+        while left < right and lists[left] <= key:
+            left += 1
+        lists[right] = lists[left]
+    lists[right] = key
+    quick_sort(lists, low, left - 1)
+    quick_sort(lists, left + 1, high)
+    return lists
+
+
+# （7）堆排序
+# 工作原理：（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。
+
+def adjust_heap(lists, i, size):
+    lchild = 2 * i + 1
+    rchild = 2 * i + 2
+    max = i
+    if i < size / 2:
+        if lchild < size and lists[lchild] > lists[max]:
+            max = lchild
+        if rchild < size and lists[rchild] > lists[max]:
+            max = rchild
+        if max != i:
+            lists[max], lists[i] = lists[i], lists[max]
+            adjust_heap(lists, max, size)
+ 
+def build_heap(lists, size):
+    for i in range(0, (size/2))[::-1]:
+        adjust_heap(lists, i, size)
+ 
+def heap_sort(lists):
+    size = len(lists)
+    build_heap(lists, size)
+    for i in range(0, size)[::-1]:
+        lists[0], lists[i] = lists[i], lists[0]
+        adjust_heap(lists, 0, i)
+
+
+# （8）基数排序（桶排）
+# 工作原理：基数排序（radix sort）属于“分配式排序”（distribution sort），又称“桶子法”（bucket sort）或bin sort，顾名思义，它是透过键值的部份资讯，将要排序的元素分配至某些“桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为O (nlog(r)m)，其中r为所采取的基数，而m为堆数，在某些时候，基数排序法的效率高于其它的稳定性排序法。
+
+import math
+def radix_sort(lists, radix=10):
+    k = int(math.ceil(math.log(max(lists), radix)))
+    bucket = [[] for i in range(radix)]
+    for i in range(1, k+1):
+        for j in lists:
+            bucket[j/(radix**(i-1)) % (radix**i)].append(j)
+        del lists[:]
+        for z in bucket:
+            lists += z
+            del z[:]
+    return lists
 ```
