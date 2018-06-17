@@ -33,6 +33,7 @@ image: interview.jpg
 * [11. 猜数字游戏](#11-猜数字游戏)
 * [12. 迭代器和可迭代对象](#12-迭代器和可迭代对象)
 * [13. 【算法】八大排序算法的python实现](#13-八大排序算法的python实现)
+* [14. 【算法】费波拉契数列的python实现（多种方法实现）](#14-费波拉契数列的python实现)
 
 ---
 
@@ -595,4 +596,41 @@ def radix_sort(lists, radix=10):
             lists += z
             del z[:]
     return lists
+```
+
+## 14 费波拉契数列的python实现
+
+*【题目】* 斐波那契数列（Fibonacci sequence），又称黄金分割数列、因数学家列昂纳多·斐波那契（Leonardoda Fibonacci）以兔子繁殖为例子而引入，故又称为“兔子数列”，指的是这样一个数列：1、1、2、3、5、8、13、21、34、……
+基于python用多种方式，生成费波拉契数列。
+
+**解答**
+```python
+# （1）递归法 返回 idx 位的数值，缺点：只能返回某个值
+def fib_recursion(idx):
+    if idx <= 2:
+        return 1
+    else:
+        return fib_recursion(idx-1) + fib_recursion(idx-2)
+
+# （2）迭代法 返回 idx 位之前的fib数列
+def fib_iteration(idx):
+    re_list = []
+    n,a,b = 0,0,1
+    while n < idx:
+        res_list.append(b)
+        a,b = b, a+b
+        n += 1
+    return res_list
+
+# （3）生成器法 
+def fib_generator(idx):
+    n,a,b = 0,0,1
+    while n < idx:
+        yield b
+        a,b = b, a+b
+        n += 1
+
+fib_obj = fib_generator(5)
+for i in fib_obj:
+    print(i)
 ```
