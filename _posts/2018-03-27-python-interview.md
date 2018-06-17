@@ -434,7 +434,9 @@ if __name__ == '__main__':
 > 详解（虽然不是用Python实现）：https://www.cnblogs.com/RainyBear/p/5258483.html
 > 时间复杂度、原理相关 ：https://blog.csdn.net/yuxin6866/article/details/52771739
 
+
 ![总结](http://cricode.qiniudn.com/sort_table.jpg)
+
 
 ```python
 # （1）插入排序
