@@ -13,6 +13,7 @@ image: yhsb.jpg
 
 # 一、Python-入门
 - [【大师】廖雪峰的博客](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
+- [【基础】collections库的基本使用](https://www.cnblogs.com/wang-com/p/5869457.html)
 
 
 # 二、Python-Web
