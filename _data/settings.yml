@@ -6,7 +6,7 @@ disqus:
 google-ID: 'UA-112060364-2'
 
 menu:
-- {name: '个人简历', folder: 'pages', file: 'resume.html'}
+- {name: 'Resume', folder: 'pages', file: 'resume.html'}
 - {name: 'Python', folder: 'pages', file: 'python.html'}
 - {name: 'Linux', folder: 'pages', file: 'linux.html'}
 - {name: 'DB', folder: 'pages', file: 'db.html'}
