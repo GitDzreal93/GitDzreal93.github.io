@@ -40,12 +40,12 @@ image: interview.jpg
 
 
 
- # python语言特性
+# python语言特性
 
 
 
 
- # python编程题
+# python编程题
 
 ## 1.如何去除列表中的重复元素
 
