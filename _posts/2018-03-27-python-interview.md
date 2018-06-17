@@ -70,7 +70,7 @@ for i in l:
 
 ## 2.两个列表如何生成一个对应的字典
 
-题目：给出
+*题目*：给出
 
 l1 = ['Ben', 'Funn', 'Mike', 'Ronaldo']
 
@@ -213,7 +213,7 @@ s1 = { x for x in s if x % 3 == 0 }
 ```python
 # 解法1：枚举的方式
 # 假设：
-student_A =（'Dzreal', 24, 'male', 'dzreal_93@126.com'）
+student_A =('Dzreal', 24, 'male', 'dzreal_93@126.com')
 
 NAME = 0
 AGE = 1
