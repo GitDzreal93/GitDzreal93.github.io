@@ -713,11 +713,7 @@ while True:
 
 **解答**
 
-```python
 
-# TODO
-
-```
 
 ## 18 【程序设计】判断一个字符串中的“括号”是不是成对出现的
 
@@ -725,11 +721,7 @@ while True:
 
 **解答**
 
-```python
 
-# TODO
-
-```
 
 ## 19 【程序设计】修改某个文本文件中的某个字符串
 
@@ -751,8 +743,3 @@ sed -i "s/hard/soft/g" English.txt
 
 用python的方式去解
 
-```python
-
-# TODO
-
-```
