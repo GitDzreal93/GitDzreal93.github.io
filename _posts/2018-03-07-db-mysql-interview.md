@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MySQL 入门知识"
+title: "db Interview"
 author: "Dzreal"
 categories: db
 tags: [db]
@@ -45,4 +45,3 @@ mysql> select * from user;
 mysql> SELECT name, sum(score) AS scores FROM user GROUP BY name ORDER BY scores DESC
 
 ```
-
