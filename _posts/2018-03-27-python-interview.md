@@ -639,6 +639,7 @@ def fib_generator(idx):
 fib_obj = fib_generator(5)
 for i in fib_obj:
     print(i)
+
 ```
 
 ## 15 python的字典合并
@@ -705,6 +706,7 @@ while True:
     #用线程去处理新接收的连接(用户)
     client_thread = threading.Thread(target=handle_sock, args=(sock, addr))
     client_thread.start()
+
 ```
 
 ## 17 【程序设计】在有序列表里面，查找某个值的位置
@@ -717,7 +719,7 @@ while True:
 
 ## 18 【程序设计】判断一个字符串中的“括号”是不是成对出现的
 
-*【题目】* 给出字符串 s = "12312{{asdas}{{{456}88}111}}{asd{asdasd}"，判断字符串s中的 括号 是不是成对出现的
+*【题目】* 给出字符串 s = "12312{{asdas}{{{456}88}111}}{asd{asdasd}}"，判断字符串s中的 括号 是不是成对出现的
 
 **解答**
 
