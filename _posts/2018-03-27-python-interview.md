@@ -34,6 +34,8 @@ image: interview.jpg
 * [12. 迭代器和可迭代对象](#12-迭代器和可迭代对象)
 * [13. 【算法】八大排序算法的python实现](#13-八大排序算法的python实现)
 * [14. 【算法】费波拉契数列的python实现（多种方法实现）](#14-费波拉契数列的python实现)
+* [15. python的字典合并](#15-python的字典合并)
+* [16. python的socket编程](#16-python的socket编程)
 
 ---
 
@@ -633,4 +635,120 @@ def fib_generator(idx):
 fib_obj = fib_generator(5)
 for i in fib_obj:
     print(i)
+```
+
+## 15 python的字典合并
+
+**参考** [python字典合并](https://blog.csdn.net/jerry_1126/article/details/73017270)
+
+主要思路：
+- 借助dict(d1.items() + d2.items())的方法,注意：d1.items() + d2.items()拼成一个新的**列表**
+- 借助字典的update()方法：d1.update(d2)
+- 借助字典的dict(d1, **d2)方法
+- 借助字典的常规处理方法（采用迭代的方式）
+
+## 16 python的socket编程
+
+**解答**
+
+服务端要做的工作：
+- 创建socket
+- 绑定端口
+- 监听端口
+- 接收消息
+- 发送消息
+
+服务端要做的工作：
+- 创建socket
+- 连接socket
+- 发送消息
+- 接收消息
+
+```python
+
+# 客户端
+import socket
+client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+client.connect(('127.0.0.1', 8000))
+while True:
+    re_data = input()
+    client.send(re_data.encode("utf8"))
+    data = client.recv(1024)
+    print(data.decode("utf8"))
+
+
+# 服务端
+import socket
+import threading
+
+server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+server.bind(('0.0.0.0', 8000))
+server.listen()
+
+
+def handle_sock(sock, addr):
+    while True:
+        data = sock.recv(1024)
+        print(data.decode("utf8"))
+        re_data = input()
+        sock.send(re_data.encode("utf8"))
+
+#获取从客户端发送的数据
+#一次获取1k的数据
+while True:
+    sock, addr = server.accept()
+
+    #用线程去处理新接收的连接(用户)
+    client_thread = threading.Thread(target=handle_sock, args=(sock, addr))
+    client_thread.start()
+```
+
+## 17 【程序设计】在有序列表里面，查找某个值的位置
+
+*【题目】* 设计一个程序（函数），已知一个值（n = 5）和一个有序列表（L = [1,2,3,4,5,6]），求一个值在在这个有序列表中的位置。并对这个程序进行测试用例的设计。
+
+**解答**
+
+```python
+
+答案暂无
+
+```
+
+## 18 【程序设计】判断一个字符串中的 "{", "}" 是不是成对出现的
+
+*【题目】* 给出字符串 s = "12312{{asdas}{{{456}88}111}}{asd{asdasd}"，判断字符串s中的括号是不是成对出现的
+
+**解答**
+
+```python
+
+答案暂无
+
+```
+
+## 19 【程序设计】修改某个文本文件中的某个字符串
+
+*【题目】* 文本文件 English.txt 打开如下所示：
+
+>  Paypal is a great site and is used by many to send and receive money. Unfortunately some dishonest people are using the Popularity of Paypal to line their own pockets with gold at the expense of unsuspecting Pay Pal members. These paypal Scam Artists will try to get your Paypal ID and password so they can Login then Clean out your Paypal Account of all funds. Paypal is fully aware of this problem and is doing everything possible to stop this. Unfortunately if someone logs into an account with a valid Id and Password it is very **hard** for Paypal or any other secure site for that matter to stop it. As a Consumer you need to be educated so you can protect yourself.
+
+用任意方式，把 **hard** 替换成 **soft**
+
+**解答**
+
+用 Linux sed 命令
+
+```bash
+
+sed -i "s/hard/soft/g" English.txt
+
+```
+
+用python的方式去解
+
+```python
+
+答案暂无
+
 ```
