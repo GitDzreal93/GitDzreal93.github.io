@@ -723,6 +723,33 @@ while True:
 
 **解答**
 
+```python
+
+s = "12312{}{111{222}}{{[22]}}"
+
+def judge_brackets(target_str):
+    left_list = []
+    right_list = []
+    for i in target_str:
+        if i == '{' or i == '(' or i == '[':
+            left_list.append(i)
+        if (i == '}' or i == ')' or i == ']'):
+            if left_list != []:
+                left_list.pop()
+            else:
+                right_list.append(i)
+
+    if left_list != [] or right_list != []:
+        return "括号不是成对出现的"
+
+    return "括号是成对出现的"
+
+
+p = judge_brackets(s)
+print(p)
+
+# 结果：括号是成对出现的
+```
 
 
 ## 19 【程序设计】修改某个文本文件中的某个字符串
@@ -745,3 +772,22 @@ sed -i "s/hard/soft/g" English.txt
 
 用python的方式去解
 
+```python
+
+name = os.path.join(path,'English.txt')
+
+def update_txt(file, old_str, new_str):
+    file_data = ''
+    with open(file, "r", encoding='utf-8') as f:
+        for line in f:
+            if old_str in line:
+                line = line.replace(old_str, new_str)
+            file_data += line
+    with open(file,"w",encoding="utf-8") as f:
+        f.write(file_data)
+
+update_txt(name,'hard','soft')
+
+```
+
+## 20 python的赋值、浅拷贝和深拷贝的区别
