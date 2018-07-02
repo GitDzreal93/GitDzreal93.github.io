@@ -202,6 +202,10 @@ tail file               # 显示文件最后10行
 head file               # 显示文件开头10行（查看日志用得最多）
     -n                  # 显示文件开头n行
 
+# 常考面试题：
+    # （1）查看文件的 300-399 行
+    sed -n '300, 500p' file
+
 ```
 
 ### 查找
@@ -227,6 +231,7 @@ grep                    # 超级强大的查找（过滤）工具
     tail -f log | grep str1 | grep str2     # 同时满足 str1 和 str2 才显示出来
     tail -f log | grep -E "str1|str2"       # 满足 str1 或 str2 都会显示出来
     tail -f log | grep str --color          # 搜出结果的同时高亮字符串
+    grep -o 'str' file | wc -l              # 查询字符串在文件中出现的次数
 ```
 
 ### 查看系统相关的信息
