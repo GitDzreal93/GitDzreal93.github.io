@@ -201,7 +201,7 @@ for i in li:
 # 创建一个随机生成学生分数的字典，这里采用的是faker库来随机生成中文学生名，并用字典生成式过滤出分数大于90的学生
 from faker import Faker
 f = Faker(locale='zh_CN')
-all_dict = {f.name() : randint(60,100) for x in range(1,100)}
+all_dict = {f.name() : randint(60,100) for _ in range(1,100)}
 perfect_dict = {name:score for name, score in all_dict.items() if score > 90} 
 
 # （3）集合
@@ -269,7 +269,7 @@ print(top10)
 ```python
 from faker import Faker
 f = Faker(locale='zh_CN')
-all_stu_dict = {f.name() : randint(0,100) for x in range(30)}
+all_stu_dict = {f.name() : randint(0,100) for _ in range(30)}
 
 # 思路：用sorted()函数去派去，sorted()函数适用于可迭代对象：sorted(iterable, cmd=None, key=None, reverse=False)
 # cmp 是用于比较的函数，比较什么由key 决定
@@ -661,7 +661,7 @@ for i in fib_obj:
 **参考** [python字典合并](https://blog.csdn.net/jerry_1126/article/details/73017270)
 
 主要思路：
-- 借助dict(d1.items() + d2.items())的方法,注意：d1.items() + d2.items()拼成一个新的**列表**
+- 借助dict(list(d1.items()) + list(d2.items())的方法,注意：list(d1.items()) + list(d2.items())拼成一个新的**列表**
 - 借助字典的update()方法：d1.update(d2)
 - 借助字典的dict(d1, **d2)方法
 - 借助字典的常规处理方法（采用迭代的方式）
